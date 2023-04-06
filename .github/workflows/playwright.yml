@@ -14,7 +14,10 @@ jobs:
         with:
           node-version: 16
       - name: timestamp
-        run: echo "${{github.event.repository.updated_at}}"
+        run: |
+          timestamp1 = "${{github.event.repository.updated_at}}"
+          convert = $(($(date -d "$timestamp1" +%s)))
+          echo "::set-output name=convert::$convert"
       - name: Install dependencies
         run: npm ci
       - name: Install Playwright Browsers
