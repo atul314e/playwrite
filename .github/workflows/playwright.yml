@@ -16,8 +16,11 @@ jobs:
       - name: timestamp
         run: |
           timestamp1="${{github.event.repository.updated_at}}"
+          timestamp2="${{date +'%Y-%m-%dT%H:%M:%S'}}"
           convert=$(($(date -d "$timestamp1" +%s)))
+          convert2=$(($(date -d "$timestamp2" +%s)))
           echo "$convert"
+          echo "$convert2"
       - name: Install dependencies
         run: npm ci
       - name: Install Playwright Browsers
