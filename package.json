@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "@playwright/test": "^1.31.2",
+    "playwright": "^1.31.0"
+  },
+  "scripts": {
+    "chrome:debug": "npx playwright test --project=chromium --debug",
+    "firefox:debug": "npx playwright test --project=firefox --debug",
+    "webkit:debug": "npx playwright test --project=webkit --debug",
+    "test": "npx playwright test",
+    "test:debug": "",
+    "chrome": "npx playwright test --project=chromium",
+    "firefox": "npx playwright test --project=firefox",
+    "webkit": "npx playwright test --project=webkit"
+  }
+}
