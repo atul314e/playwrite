@@ -1,9 +1,8 @@
 name: Playwright Tests
 on:
-  push:
-    branches: [main, master]
-  pull_request:
-    branches: [main, master]
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0/1 * * *"
 jobs:
   test:
     timeout-minutes: 60
@@ -13,16 +12,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: timestamp
-        run: |
-          timestamp1="${{github.event.repository.updated_at}}"
-          timestamp2=$(date --iso-8601=seconds)
-          convert=$(($(date -d "$timestamp1" +%s)))
-          convert2=$(($(date -d "$timestamp2" +%s)))
-          echo "last=$convert" >> $GITHUB_ENV
-          echo "current=$convert2" >> $GITHUB_ENV
-      - name: difference
-        run: echo "$last"
+      - name: get new commits
+        run: echo "NEW_COMMIT_COUNT=$(git log --oneline --since '1 hours ago' | wc -l)" >> $GITHUB_ENV
+        if: ${{ env.NEW_COMMIT_COUNT > 0 }}
       - name: Install dependencies
         run: npm ci
       - name: Install Playwright Browsers
