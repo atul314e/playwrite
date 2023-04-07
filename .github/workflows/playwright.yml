@@ -14,10 +14,12 @@ jobs:
           node-version: 16
       - name: get new commits
         run: echo "NEW_COMMIT_COUNT=$(git log --oneline --since '1 hours ago' | wc -l)" >> $GITHUB_ENV
-        if: ${{ env.NEW_COMMIT_COUNT > 0 }}
       - name: Install dependencies
+        if: ${{ env.NEW_COMMIT_COUNT > 0 }}
         run: npm ci
       - name: Install Playwright Browsers
+        if: ${{ env.NEW_COMMIT_COUNT > 0 }}
         run: npx playwright install --with-deps
       - name: Run Playwright tests
+        if: ${{ env.NEW_COMMIT_COUNT > 0 }}
         run: npx playwright test
