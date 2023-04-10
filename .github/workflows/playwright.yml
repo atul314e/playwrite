@@ -23,6 +23,8 @@ jobs:
       - name: Run Playwright tests
         if: ${{ env.NEW_COMMIT_COUNT > 0 }}
         run: npx playwright test
+      - name: Check token
+        run: echo ${{ secrets.SLACK_SECRET }}
       - name: Post to a Slack channel
         id: slack
         uses: slackapi/slack-github-action@v1.23.0
@@ -42,3 +44,5 @@ jobs:
                }
              ]
             }
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_SECRET }}
