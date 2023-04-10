@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: 16
       - name: get new commits
-        run: echo "NEW_COMMIT_COUNT=$(git log --oneline --since '10 minutes ago' | wc -l)" >> $GITHUB_ENV
+        run: echo "NEW_COMMIT_COUNT=$(git log --oneline --since '1 hour ago' | wc -l)" >> $GITHUB_ENV
       - name: Install dependencies
         if: ${{ env.NEW_COMMIT_COUNT > 0 }}
         run: npm ci
