@@ -72,7 +72,7 @@ test("page test case", async ({ page }, testInfo) => {
   await pageOperationDropdown
     .locator("span", { hasText: "Delete Page" })
     .click();
-  await page.getByRole("button", { name: "Delete" }).click();
+  await page.getByRole("button", { name: "Delete", exact: true }).click();
 
   await admin.scrollIntoViewIfNeeded();
 
@@ -82,5 +82,5 @@ test("page test case", async ({ page }, testInfo) => {
   await pageOperationDropdown
     .locator("span", { hasText: "Delete Page" })
     .click();
-  await page.getByRole("button", { name: "Delete" }).click();
+  await page.getByRole("button", { name: "Delete", exact: true }).click();
 });
