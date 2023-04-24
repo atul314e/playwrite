@@ -16,7 +16,7 @@ jobs:
         id: test
         run: echo "NEW_COMMIT_COUNT=$(git log --oneline --since '1 hour ago' | wc -l)" >> $GITHUB_ENV
       - name: print code
-        run: echo steps.test.outcome
+        run: echo ${{ env.NEW_COMMIT_COUNT }}
       - name: Install dependencies
         if: ${{ env.NEW_COMMIT_COUNT > 0 }}
         run: npm ci
