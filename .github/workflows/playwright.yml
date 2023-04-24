@@ -25,6 +25,10 @@ jobs:
       - name: Run Playwright tests
         if: ${{ env.NEW_COMMIT_COUNT > 0 }}
         run: npx playwright test
+
+      - name: print code
+        run: echo ${{steps.test.outcome}}
+
       - name: Post to a Slack channel
         id: slack
         uses: slackapi/slack-github-action@v1.23.0
