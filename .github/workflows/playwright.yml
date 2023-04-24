@@ -13,7 +13,10 @@ jobs:
         with:
           node-version: 16
       - name: get new commits
+        id: test
         run: echo "NEW_COMMIT_COUNT=$(git log --oneline --since '1 hour ago' | wc -l)" >> $GITHUB_ENV
+      - name: print code
+        run: echo steps.test.outcome
       - name: Install dependencies
         if: ${{ env.NEW_COMMIT_COUNT > 0 }}
         run: npm ci
@@ -29,7 +32,7 @@ jobs:
         run: npm run test
 
       - name: print code
-        run: echo "output is $?"
+        run: echo steps.playwrightTest.outcome
 
       - name: Post to a Slack channel
         id: slack
