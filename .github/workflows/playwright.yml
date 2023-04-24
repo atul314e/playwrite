@@ -30,8 +30,14 @@ jobs:
         run: npm run test
 
       - name: print code
-        run: echo "outcome ${{ steps.playwrightTest.outcome }}"
+        run: |
+          if [[${steps.playwrightTest.outcome} == failure]]; then
+             echo "STATUS_MESSAGE=failure" >> $GITHUB_ENV
+          else
+             echo "STATUS_MESSAGE=success" >> $GITHUB_ENV
 
+      - name: check
+        run: echo ${{env.STATUS_MESSAGE}}
       - name: Post to a Slack channel
         id: slack
         uses: slackapi/slack-github-action@v1.23.0
