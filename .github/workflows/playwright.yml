@@ -23,13 +23,12 @@ jobs:
         if: ${{ env.NEW_COMMIT_COUNT > 0 }}
         run: npx playwright install --with-deps
       - name: Run Playwright tests
+        id: playwrightTest
         if: ${{ env.NEW_COMMIT_COUNT > 0 }}
-        run: |
-          outcome=$(npx playwright test)
-          echo "::set-output name=outcome::$outcome"
+        run: npm run test
 
       - name: print code
-        run: echo "Outcome is ${{job.steps.test.outputs.outcome}}"
+        run: echo "Outcome is ${{steps.hello.playwrightTest}}"
 
       - name: Post to a Slack channel
         id: slack
