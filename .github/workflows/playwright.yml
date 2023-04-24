@@ -30,7 +30,7 @@ jobs:
         run: npm run test
 
       - name: print code
-        run: echo ${{ steps.playwrightTest.outcome }}
+        run: echo "outcome ${{ steps.playwrightTest.outcome }}"
 
       - name: Post to a Slack channel
         id: slack
