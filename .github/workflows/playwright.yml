@@ -27,7 +27,7 @@ jobs:
         run: npx playwright test
 
       - name: print code
-        run: echo "Outcome is ${{steps.test.outcome}}"
+        run: echo "Outcome is ${{job.steps.test.outcome}}"
 
       - name: Post to a Slack channel
         id: slack
