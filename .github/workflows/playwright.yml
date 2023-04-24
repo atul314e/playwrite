@@ -31,7 +31,7 @@ jobs:
 
       - name: print code
         run: |
-          if [[${steps.playwrightTest.outcome} == failure]]; then
+          if [[${{steps.playwrightTest.outcome}} == failure]]; then
              echo "STATUS_MESSAGE=failure" >> $GITHUB_ENV
           else
              echo "STATUS_MESSAGE=success" >> $GITHUB_ENV
