@@ -24,7 +24,9 @@ jobs:
         run: npx playwright install --with-deps
       - name: Run Playwright tests
         if: ${{ env.NEW_COMMIT_COUNT > 0 }}
-        run: npx playwright test
+        run: |
+          outcome=$(npx playwright test)
+          echo "::set-output name=outcome::$outcome"
 
       - name: print code
         run: echo "Outcome is ${{job.steps.test.outputs.outcome}}"
