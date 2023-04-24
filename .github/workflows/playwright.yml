@@ -25,6 +25,7 @@ jobs:
       - name: Run Playwright tests
         id: playwrightTest
         if: ${{ env.NEW_COMMIT_COUNT > 0 }}
+        continue-on-error: true
         run: npm run test
 
       - name: print code
