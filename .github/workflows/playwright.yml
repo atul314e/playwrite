@@ -35,7 +35,7 @@ jobs:
              echo "STATUS_MESSAGE=failure" >> $GITHUB_ENV
           else
              echo "STATUS_MESSAGE=success" >> $GITHUB_ENV
-
+          fi
       - name: check
         run: echo ${{env.STATUS_MESSAGE}}
       - name: Post to a Slack channel
