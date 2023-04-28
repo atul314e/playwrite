@@ -103,46 +103,23 @@
               "results": [
                 {
                   "workerIndex": 0,
-                  "status": "interrupted",
-                  "duration": 8422,
-                  "error": {
-                    "message": "page.goto: Navigation failed because page was closed!\n=========================== logs ===========================\nnavigating to \"https://test1.practifly.app/sprint/\", waiting until \"load\"\n============================================================",
-                    "stack": "Error: page.goto: Navigation failed because page was closed!\n=========================== logs ===========================\nnavigating to \"https://test1.practifly.app/sprint/\", waiting until \"load\"\n============================================================\n    at Authentication.login (/Users/atul.silori/work/playwrite/src/pages/auth.page.ts:10:21)\n    at /Users/atul.silori/work/playwrite/src/tests/add_and_delete_a_new_form.spec.ts:8:8"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/Users/atul.silori/work/playwrite/src/pages/auth.page.ts",
-                        "column": 21,
-                        "line": 10
-                      },
-                      "message": "Error: page.goto: Navigation failed because page was closed!\n=========================== logs ===========================\nnavigating to \"https://test1.practifly.app/sprint/\", waiting until \"load\"\n============================================================\n\n\u001b[90m   at \u001b[39m../pages/auth.page.ts:10\n\n\u001b[0m \u001b[90m  8 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  9 |\u001b[39m   \u001b[36masync\u001b[39m login(username\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m password\u001b[33m:\u001b[39m string) {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://test1.practifly.app/sprint/\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 11 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'input[id=\"username\"]'\u001b[39m)\u001b[33m.\u001b[39mfill(username)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 12 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'input[id=\"password\"]'\u001b[39m)\u001b[33m.\u001b[39mfill(password)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 13 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"Sign In\"\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at Authentication.login (/Users/atul.silori/work/playwrite/src/pages/auth.page.ts:10:21)\u001b[22m\n\u001b[2m    at /Users/atul.silori/work/playwrite/src/tests/add_and_delete_a_new_form.spec.ts:8:8\u001b[22m"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 18119,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-04-21T06:39:07.821Z",
+                  "startTime": "2023-04-28T11:49:18.357Z",
                   "attachments": [
                     {
                       "name": "video",
                       "contentType": "video/webm",
                       "path": "/Users/atul.silori/work/playwrite/test-results/add_and_delete_a_new_form-test-chromium/video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/atul.silori/work/playwrite/test-results/add_and_delete_a_new_form-test-chromium/test-failed-1.png"
                     }
-                  ],
-                  "errorLocation": {
-                    "file": "/Users/atul.silori/work/playwrite/src/pages/auth.page.ts",
-                    "column": 21,
-                    "line": 10
-                  }
+                  ]
                 }
               ],
-              "status": "skipped"
+              "status": "expected"
             }
           ],
           "id": "c28235a05d9475673c7b-eb1879fb48358757e3c3",
@@ -163,18 +140,24 @@
               "projectName": "firefox",
               "results": [
                 {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 22793,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-04-21T06:39:16.536Z",
-                  "attachments": []
+                  "startTime": "2023-04-28T11:49:36.886Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/atul.silori/work/playwrite/test-results/add_and_delete_a_new_form-test-firefox/video.webm"
+                    }
+                  ]
                 }
               ],
-              "status": "skipped"
+              "status": "expected"
             }
           ],
           "id": "c28235a05d9475673c7b-57779924a8973afb9d9d",
@@ -195,231 +178,29 @@
               "projectName": "webkit",
               "results": [
                 {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 21017,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-04-21T06:39:16.536Z",
-                  "attachments": []
+                  "startTime": "2023-04-28T11:50:00.461Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/atul.silori/work/playwrite/test-results/add_and_delete_a_new_form-test-webkit/video.webm"
+                    }
+                  ]
                 }
               ],
-              "status": "skipped"
+              "status": "expected"
             }
           ],
           "id": "c28235a05d9475673c7b-68799936e8056b3b59bc",
           "file": "add_and_delete_a_new_form.spec.ts",
           "line": 6,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "form_category.spec.ts",
-      "file": "form_category.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "test",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-04-21T06:39:16.536Z",
-                  "attachments": []
-                }
-              ],
-              "status": "skipped"
-            }
-          ],
-          "id": "3bbe990759e34d8a8d87-e55b02936ada0c50ac8b",
-          "file": "form_category.spec.ts",
-          "line": 5,
-          "column": 5
-        },
-        {
-          "title": "test",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-04-21T06:39:16.536Z",
-                  "attachments": []
-                }
-              ],
-              "status": "skipped"
-            }
-          ],
-          "id": "3bbe990759e34d8a8d87-ff2b9924262c250405ff",
-          "file": "form_category.spec.ts",
-          "line": 5,
-          "column": 5
-        },
-        {
-          "title": "test",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-04-21T06:39:16.536Z",
-                  "attachments": []
-                }
-              ],
-              "status": "skipped"
-            }
-          ],
-          "id": "3bbe990759e34d8a8d87-ed8c9ef8502b0f18d409",
-          "file": "form_category.spec.ts",
-          "line": 5,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "page.spec.ts",
-      "file": "page.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "page test case",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-04-21T06:39:16.536Z",
-                  "attachments": []
-                }
-              ],
-              "status": "skipped"
-            }
-          ],
-          "id": "ea7f5a6ac9463218d2f1-37d87a28569ae499f7b2",
-          "file": "page.spec.ts",
-          "line": 5,
-          "column": 5
-        },
-        {
-          "title": "page test case",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-04-21T06:39:16.536Z",
-                  "attachments": []
-                }
-              ],
-              "status": "skipped"
-            }
-          ],
-          "id": "ea7f5a6ac9463218d2f1-63b4a4a46d669030d8d6",
-          "file": "page.spec.ts",
-          "line": 5,
-          "column": 5
-        },
-        {
-          "title": "page test case",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-04-21T06:39:16.536Z",
-                  "attachments": []
-                }
-              ],
-              "status": "skipped"
-            }
-          ],
-          "id": "ea7f5a6ac9463218d2f1-61345260b6576fc631a8",
-          "file": "page.spec.ts",
-          "line": 5,
           "column": 5
         }
       ]
